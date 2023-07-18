@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 
 interface props {
@@ -14,12 +14,18 @@ interface props {
   price_change_percentage_24h?:number| undefined,
   market_cap_change_24h?:number,
   market_cap_change_percentage_24h?:number,
-  last_updated?:string
+  last_updated?:string,
+  market_cap_rank?:number
   }
 
 
 const CoinListItem: React.FC<props> = (props) => {
 
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleDetails = () => {
+    setExpanded(!expanded);
+  };
 
   const formattedMarketCap = props.market_cap?.toLocaleString('en-US', { useGrouping: true });
 
@@ -35,14 +41,17 @@ const CoinListItem: React.FC<props> = (props) => {
     <div className="coin-container">
       <section className='coin-list-item'>
         <img src={props.image} alt='coin-img' className='item-img'/>
+        <p className='item-rank'>{props.market_cap_rank}</p>
         <p className='item-name'>{props.name}</p>
         <p className='item-symbol'>{props.symbol?.toUpperCase()}</p>
         <p className='item-price'>${props.price}</p>
         <p style={calculatePriceChangeStyle(props.price_change_percentage_24h)} className='item-24h-change'>{props.price_change_percentage_24h?.toFixed(1)}%</p>
         <p className='item-market-cap'>${formattedMarketCap}</p>
-        <button className='more-details-button'>More Details</button>
+        <button className='more-details-button' onClick={toggleDetails}>
+          {expanded ? 'Hide Details' : 'More Details'}
+        </button>
       </section>
-      <section className='coin-details'>
+      <section className={`coin-details ${expanded ? 'expanded' : ''}`}>
         <div className='one-detail'>
           <label>24 Hour Low: </label>
           <p>{props.low_24h}</p>
@@ -55,13 +64,17 @@ const CoinListItem: React.FC<props> = (props) => {
           <label>Total Volume: </label>
           <p>{props.total_volume}</p>
         </div>
+        <div className='one-detail'>
+          <label>Last Updated: </label>
+          <p>{props.last_updated}</p>
+        </div>
         <div  className='one-detail'>
           <label>Price Change 24h: </label>
           <p style={calculatePriceChangeStyle(props.price_change_24h)}>{props.price_change_24h}</p>
         </div>
         <div className='one-detail'>
           <label>Price Change Percentage 24h: </label>
-          <p style={calculatePriceChangeStyle(props.price_change_percentage_24h)}>{props.price_change_percentage_24h}</p>
+          <p style={calculatePriceChangeStyle(props.price_change_percentage_24h)}>{props.price_change_percentage_24h?.toFixed(1)}%</p>
         </div>
         <div className='one-detail'>
           <label>Marketcap Change 24h: </label>
@@ -69,12 +82,9 @@ const CoinListItem: React.FC<props> = (props) => {
         </div>
         <div className='one-detail'>
           <label>Marketcap Change Percentage 24h: </label>
-          <p style={calculatePriceChangeStyle(props.market_cap_change_percentage_24h)}>{props.market_cap_change_percentage_24h}</p>
+          <p style={calculatePriceChangeStyle(props.market_cap_change_percentage_24h)}>{props.market_cap_change_percentage_24h?.toFixed(1)}%</p>
         </div>
-        <div className='one-detail'>
-          <label>Last Updated: </label>
-          <p>{props.last_updated}</p>
-        </div>
+        
       </section>
     </div>
   );

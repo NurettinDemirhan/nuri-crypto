@@ -1,0 +1,48 @@
+// sass --watch ListHeader.scss ListHeader.css
+.list-header-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .list-header{
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1300px;
+        max-width: 95%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: rgb(233, 231, 231);
+        font-size: 1rem;
+        .start{
+            width: 60px;
+        }
+        .end{
+            width: 10%;
+        }
+        .name{
+            width: 35%;
+            color: white;
+        }
+        .symbol{
+            width: 10%;
+          }
+        .price{
+            width: 10%;
+          }
+        .change{
+            width: 5%;
+            display: flex;
+            justify-content: flex-end;
+          }
+        .market-cap{
+            width: 20%;
+            margin-right: 5%;
+            display: flex;
+            justify-content: flex-end;
+          }
+    }
+}
+

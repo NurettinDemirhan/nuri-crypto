@@ -1,0 +1,48 @@
+.list-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.list-header-container .list-header {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: 1300px;
+  max-width: 95%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: rgb(233, 231, 231);
+  font-size: 1rem;
+}
+.list-header-container .list-header .start {
+  width: 60px;
+}
+.list-header-container .list-header .end {
+  width: 10%;
+}
+.list-header-container .list-header .name {
+  width: 35%;
+  color: white;
+}
+.list-header-container .list-header .symbol {
+  width: 10%;
+}
+.list-header-container .list-header .price {
+  width: 10%;
+}
+.list-header-container .list-header .change {
+  width: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+.list-header-container .list-header .market-cap {
+  width: 20%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=ListHeader.css.map */

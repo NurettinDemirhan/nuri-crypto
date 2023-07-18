@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./CoinList.css"
 import CoinListItem from './coin-list-item/CoinListItem';
 import axios from 'axios';
-
+import ListHeader from '../list-header/ListHeader';
 
 
 
@@ -27,7 +27,8 @@ const CoinList: React.FC = () => {
         price_change_percentage_24h?:number| undefined,
         market_cap_change_24h?:number,
         market_cap_change_percentage_24h?:number,
-        last_updated?:string
+        last_updated?:string,
+        market_cap_rank?:number
     }
 
     async function fetchingData() {
@@ -58,11 +59,14 @@ const CoinList: React.FC = () => {
           market_cap_change_24h={item.market_cap_change_24h}
           market_cap_change_percentage_24h={item.market_cap_change_percentage_24h}
           last_updated={item.last_updated}
+          market_cap_rank={item.market_cap_rank}
         />
       ));
 
   return (
     <div className="coin-list">
+      <h1>TOP 10 CURRENCIES</h1>
+        <ListHeader/>
         {coinList}
     </div>
   );
