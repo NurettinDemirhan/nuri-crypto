@@ -15,7 +15,9 @@ interface props {
   market_cap_change_24h?:number,
   market_cap_change_percentage_24h?:number,
   last_updated?:string,
-  market_cap_rank?:number
+  market_cap_rank?:number,
+  asd?: boolean,
+  onClickDelete?: () => void;
   }
 
 
@@ -52,38 +54,48 @@ const CoinListItem: React.FC<props> = (props) => {
         </button>
       </section>
       <section className={`coin-details ${expanded ? 'expanded' : ''}`}>
-        <div className='one-detail'>
-          <label>24 Hour Low: </label>
-          <p>{props.low_24h}</p>
-        </div>
-        <div className='one-detail'>
-          <label>24 Hour High: </label>
-          <p>{props.high_24h}</p>
-        </div>
-        <div className='one-detail'>
-          <label>Total Volume: </label>
-          <p>{props.total_volume}</p>
-        </div>
-        <div className='one-detail'>
-          <label>Last Updated: </label>
-          <p>{props.last_updated}</p>
-        </div>
-        <div  className='one-detail'>
-          <label>Price Change 24h: </label>
-          <p style={calculatePriceChangeStyle(props.price_change_24h)}>{props.price_change_24h}</p>
-        </div>
-        <div className='one-detail'>
-          <label>Price Change Percentage 24h: </label>
-          <p style={calculatePriceChangeStyle(props.price_change_percentage_24h)}>{props.price_change_percentage_24h?.toFixed(1)}%</p>
-        </div>
-        <div className='one-detail'>
-          <label>Marketcap Change 24h: </label>
-          <p style={calculatePriceChangeStyle(props.market_cap_change_24h)}>{props.market_cap_change_24h}</p>
-        </div>
-        <div className='one-detail'>
-          <label>Marketcap Change Percentage 24h: </label>
-          <p style={calculatePriceChangeStyle(props.market_cap_change_percentage_24h)}>{props.market_cap_change_percentage_24h?.toFixed(1)}%</p>
-        </div>
+        
+
+        
+          <div className='one-detail'>
+            <label>24 Hour Low: </label>
+            <p>{props.low_24h}</p>
+          </div>
+          <div className='one-detail'>
+            <label>24 Hour High: </label>
+            <p>{props.high_24h}</p>
+          </div>
+          { props.asd 
+          ? 
+          <button onClick={props.onClickDelete} className='more-details-button'>
+            Delete
+          </button>
+          : null}
+          <div className='one-detail'>
+            <label>Total Volume: </label>
+            <p>{props.total_volume}</p>
+          </div>
+          <div className='one-detail'>
+            <label>Last Updated: </label>
+            <p>{props.last_updated}</p>
+          </div>
+          <div  className='one-detail'>
+            <label>Price Change 24h: </label>
+            <p style={calculatePriceChangeStyle(props.price_change_24h)}>{props.price_change_24h}</p>
+          </div>
+          <div className='one-detail'>
+            <label>Price Change Percentage 24h: </label>
+            <p style={calculatePriceChangeStyle(props.price_change_percentage_24h)}>{props.price_change_percentage_24h?.toFixed(1)}%</p>
+          </div>
+          <div className='one-detail'>
+            <label>Marketcap Change 24h: </label>
+            <p style={calculatePriceChangeStyle(props.market_cap_change_24h)}>{props.market_cap_change_24h}</p>
+          </div>
+          <div className='one-detail'>
+            <label>Marketcap Change Percentage 24h: </label>
+            <p style={calculatePriceChangeStyle(props.market_cap_change_percentage_24h)}>{props.market_cap_change_percentage_24h?.toFixed(1)}%</p>
+          </div>
+
         
       </section>
     </div>

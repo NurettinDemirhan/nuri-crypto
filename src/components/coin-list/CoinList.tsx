@@ -4,11 +4,13 @@ import CoinListItem from './coin-list-item/CoinListItem';
 import axios from 'axios';
 import ListHeader from '../list-header/ListHeader';
 
+// interface coinListProps  {
+//   coinData: any[];
+// };
 
 
-
-const CoinList: React.FC = () => {
-
+const CoinList = () => {
+  // const { coinData } = prop;
     const [data ,setData] = useState([]);
 
     
@@ -44,8 +46,11 @@ const CoinList: React.FC = () => {
         fetchingData(); 
       }, []);
 
-    const coinList: JSX.Element[] = data.map((item:props) => (
+    const coinList: JSX.Element[] = data
+    .slice(0,10)
+    .map((item:props) => (
         <CoinListItem
+          key={item.market_cap_rank}
           price_change_percentage_24h={item.price_change_percentage_24h}
           name={item.name}
           image={item.image}
@@ -60,6 +65,7 @@ const CoinList: React.FC = () => {
           market_cap_change_percentage_24h={item.market_cap_change_percentage_24h}
           last_updated={item.last_updated}
           market_cap_rank={item.market_cap_rank}
+          asd={false}
         />
       ));
 

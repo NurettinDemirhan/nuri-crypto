@@ -1,0 +1,64 @@
+
+// src/components/personal-coin-list/
+// sass --watch PersonalCoinList.scss PersonalCoinList.css
+
+.personal-coin-list-container {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(186, 186, 186);
+  .searchbar-container {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    align-self: center;
+  }
+  .dropdown {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    color: black;
+  }
+  
+  .dropdown:empty {
+    border: none;
+  }
+  
+  .dropdown-row {
+    cursor: pointer;
+    text-align: start;
+    margin: 2px 0;
+  }
+  
+  input {
+    width: 220px;
+    height: 30px;
+    font-size: 1rem;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .search-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button{
+    width: 100px;
+    height: 2.5rem;
+    background-color: rgb(37, 37, 37);
+    color: rgb(186, 186, 186);
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 1rem;
+  }
+}
+
+
+
+
+  

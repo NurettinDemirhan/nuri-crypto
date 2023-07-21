@@ -85,6 +85,19 @@
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
+.coin-container .coin-details .more-details-button {
+  width: 10%;
+  height: 2.5rem;
+  background-color: rgb(37, 37, 37);
+  color: rgb(186, 186, 186);
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.coin-container .coin-details .more-details-button:hover {
+  background-color: black;
+  border-color: white;
+}
 .coin-container .coin-details .one-detail {
   display: flex;
   justify-content: flex-start;
