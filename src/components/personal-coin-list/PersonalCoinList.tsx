@@ -55,7 +55,7 @@ interface props {
 
   async function fetchingData() {
     try {
-      const response = await axios.get("http://localhost:3010/coins");
+      const response = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en");
       setDropdownData(response.data);
       console.log(response.data, "data fetched for personal list");
     } catch (error) {
