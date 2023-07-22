@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/nuri-crypto/static/css/main.5e969f59.css",
+    "main.js": "/nuri-crypto/static/js/main.33c3aa33.js",
+    "static/js/787.7c7da96e.chunk.js": "/nuri-crypto/static/js/787.7c7da96e.chunk.js",
+    "static/media/tracker-logo.png": "/nuri-crypto/static/media/tracker-logo.8d1fbfe20ae37d23d1fa.png",
+    "index.html": "/nuri-crypto/index.html",
+    "main.5e969f59.css.map": "/nuri-crypto/static/css/main.5e969f59.css.map",
+    "main.33c3aa33.js.map": "/nuri-crypto/static/js/main.33c3aa33.js.map",
+    "787.7c7da96e.chunk.js.map": "/nuri-crypto/static/js/787.7c7da96e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e969f59.css",
+    "static/js/main.33c3aa33.js"
+  ]
+}
