@@ -1,61 +1,78 @@
 .header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(14, 14, 14);
-    padding-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-color: rgb(14, 14, 14);
+  padding-bottom: 1rem;
 }
-.header img{
-    width: 200px;
-    margin-right: 20%;
+.header img {
+  width: 15rem;
+  position: absolute;
+  left: 10%;
 }
-.header h1{
-    font-size: 1.3rem;
-    color: rgb(73, 17, 158);
-    font-weight: 500;
-
-}
-.header a{
-    font-size: 1.3rem;
-    color: rgb(73, 17, 158);
-    font-weight: 500;
-    text-decoration: none;
-    
-}
-.header-text{
- justify-self: flex-end;
- margin-left: 20%;
- text-align: end;
- 
-}
-
-section {
-    
-    display: flex;
-    color: rgb(73, 17, 158);
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem
-    ;
+@media screen and (max-width: 900px) {
+  .header img {
+    width: 10rem;
+    left: 1rem;
   }
-  
-  
-
-section .one-link {
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .header img {
+    width: 7rem;
+    left: 1rem;
   }
-
-
-section .one-link a {
-    color: rgb(73, 17, 158);
-    text-decoration: underline;
+}
+.header div {
+  margin-right: 10%;
+  text-align: end;
+}
+@media screen and (max-width: 900px) {
+  .header div {
+    margin-right: 1rem;
+  }
+}
+.header div h1 {
+  font-size: 1.5rem;
+  color: rgb(93, 0, 255);
+}
+@media screen and (max-width: 900px) {
+  .header div h1 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header div h1 {
     font-size: 1rem;
   }
-section .one-link a:hover {
-    color: blue;
+}
+.header div p {
+  color: rgb(93, 0, 255);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+@media screen and (max-width: 900px) {
+  .header div p {
+    font-size: 1rem;
   }
+}
+.header div section {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.header div section a {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+  color: rgb(93, 0, 255);
+}
+@media screen and (max-width: 900px) {
+  .header div section a {
+    font-size: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

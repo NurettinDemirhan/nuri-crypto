@@ -26,23 +26,71 @@
 .list-header-container .list-header .name {
   width: 35%;
   color: white;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .list-header-container .list-header .name {
+    width: 20%;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .list-header-container .list-header .name {
+    width: 25%;
+    font-size: 1rem;
+  }
 }
 .list-header-container .list-header .symbol {
   width: 10%;
 }
+@media screen and (max-width: 900px) {
+  .list-header-container .list-header .symbol {
+    display: none;
+  }
+}
 .list-header-container .list-header .price {
   width: 10%;
+}
+@media screen and (max-width: 900px) {
+  .list-header-container .list-header .price {
+    width: 15%;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .list-header-container .list-header .price {
+    width: 20%;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
 }
 .list-header-container .list-header .change {
   width: 5%;
   display: flex;
   justify-content: flex-end;
 }
+@media screen and (max-width: 900px) {
+  .list-header-container .list-header .change {
+    display: none;
+  }
+}
 .list-header-container .list-header .market-cap {
   width: 20%;
   margin-right: 5%;
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 900px) {
+  .list-header-container .list-header .market-cap {
+    width: 25%;
+    font-size: 1rem;
+    margin-right: 15%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .list-header-container .list-header .market-cap {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=ListHeader.css.map */

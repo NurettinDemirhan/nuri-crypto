@@ -1,4 +1,6 @@
 // sass --watch ListHeader.scss ListHeader.css
+@import "../../mixins.scss";
+
 .list-header-container{
     width: 100%;
     display: flex;
@@ -25,23 +27,55 @@
         .name{
             width: 35%;
             color: white;
+            margin-left: 1rem;
+            @include mQmax(900px){
+              width: 20%;
+              font-size: 1rem;
+            }
+            @include mQmax(900px){
+              width: 25%;
+              font-size: 1rem;
+            }
         }
         .symbol{
             width: 10%;
+            @include mQmax(900px){
+              display: none;
+            }
           }
         .price{
             width: 10%;
+            @include mQmax(900px){
+              width: 15%;
+              font-size: 1rem;
+            }
+            @include mQmax(600px){
+              width: 20%;
+              font-size: 1rem;
+              margin-left: 0.5rem;
+            }
           }
         .change{
             width: 5%;
             display: flex;
             justify-content: flex-end;
+            @include mQmax(900px){
+              display: none;
+            }
           }
         .market-cap{
             width: 20%;
             margin-right: 5%;
             display: flex;
             justify-content: flex-end;
+            @include mQmax(900px){
+              width: 25%;
+              font-size: 1rem;
+              margin-right: 15%;
+            }
+            @include mQmax(600px){
+              display: none;
+            }
           }
     }
 }

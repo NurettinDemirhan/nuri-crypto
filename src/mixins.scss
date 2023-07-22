@@ -1,0 +1,12 @@
+@mixin mQmin($arg){
+    @media screen and (min-width: $arg){
+        @content;
+    }
+}
+@mixin mQmax($arg){
+    @media screen and (max-width: $arg){
+        @content;
+    }
+}
+$primary-color: rgb(186, 186, 186);;
+$secondary-color: rgb(91, 42, 175);

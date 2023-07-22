@@ -1,3 +1,5 @@
+@import "../../mixins.scss";
+
 .coin-list{
   width: 100%;
   display: flex;
@@ -11,6 +13,9 @@
     max-width: 95%;
     color: rgb(186, 186, 186);
     align-self: center;
+    @include mQmax(900px){
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -35,30 +40,63 @@
     color: rgb(186, 186, 186);
     border-top: 1px solid grey;
     font-size: 1rem;
+    .item-rank{
+      text-align: end;
+      width: 2rem;
+    }
     .item-img{
       width: 2rem;
     }
     .item-name{
       width: 35%;
       color: white;
+      @include mQmax(900px){
+        width: 20%;
+        font-size: 0.8rem;
+      }
+      @include mQmax(900px){
+        width: 25%;
+        font-size: 1rem;
+      }
     }
     .item-symbol{
       font-size: 0.8rem;
       width: 10%;
+      @include mQmax(900px){
+        display: none;
+      }
     }
     .item-price{
       width: 10%;
+      @include mQmax(900px){
+        width: 15%;
+        font-size: 0.8rem;
+      }
+      @include mQmax(600px){
+        width: 20%;
+        font-size: 1rem;
+      }
     }
     .item-24h-change{
       width: 5%;
       display: flex;
       justify-content: flex-end;
+      @include mQmax(900px){
+        display: none;
+      }
     }
     .item-market-cap{
       width: 20%;
       margin-right: 5%;
       display: flex;
       justify-content: flex-end;
+      @include mQmax(900px){
+        width: 25%;
+        font-size: 0.8rem;
+      }
+      @include mQmax(600px){
+        display: none;
+      }
     }
     .more-details-button{
       width: 10%;
@@ -68,6 +106,10 @@
       border: 1px solid rgb(186, 186, 186);
       border-radius: 1rem;
       cursor: pointer;
+      @include mQmax(900px){
+        width: 20%;
+        
+      }
       &:hover{
         background-color: black;
         border-color: white;
@@ -86,30 +128,49 @@
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s ease;
+    @include mQmax(600px){
+        font-size: 0.8rem;
+      }
     
     .more-details-button{
-      width: 10%;
+      width: 20%;
       height: 2.5rem;
       background-color: rgb(37, 37, 37);
       color: rgb(186, 186, 186);
       border: 1px solid rgb(186, 186, 186);
       border-radius: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       cursor: pointer;
+      @include mQmax(900px){
+        width: 250px;
+        
+      
+      }
       &:hover{
         background-color: black;
         border-color: white;
-      }}
+      }
+      
+    }
+      
     .one-detail{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      width: 40%;
+      width: 44%;
       border-bottom: 1px solid grey;
       overflow: hidden;
       transition: height 0.3s ease;
+      @include mQmax(900px){
+        width: 100%;
+      }
       
       label{
         width: 55%;
+        @include mQmax(600px){
+        width: 40%;
+      }
         
       }
       p{
@@ -121,5 +182,8 @@
   }
   .coin-details.expanded {
     max-height: 300px;
+    @include mQmax(900px){
+      max-height: 900px;
+    }
   }
 }

@@ -1,0 +1,66 @@
+@import "../../mixins.scss";
+// cd src/components/header/
+// sass --watch Header.scss Header.css
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    background-color: rgb(14, 14, 14);
+    padding-bottom: 1rem;
+    img{
+        width: 15rem;
+        position: absolute;
+        left: 10%;
+        @include mQmax(900px){
+            width: 10rem;
+            left: 1rem;
+        }
+        @include mQmax(900px){
+            width: 7rem;
+            left: 1rem;
+        }
+    }
+    div{
+        margin-right: 10%;
+        text-align: end;
+        @include mQmax(900px){
+            margin-right: 1rem;
+        }
+        h1{
+            font-size: 1.5rem;
+            color: rgb(93, 0, 255);
+            @include mQmax(900px){
+                font-size: 1.2rem;
+            }
+            @include mQmax(600px){
+                font-size: 1rem;
+            }
+        }
+        p{
+            color: rgb(93, 0, 255);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            @include mQmax(900px){
+                font-size: 1rem;
+            }
+        }
+        section{
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            a{
+                font-size: 1rem;
+                margin-top: 0.5rem;
+                text-decoration: underline;
+                color: rgb(93, 0, 255);
+                @include mQmax(900px){
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+

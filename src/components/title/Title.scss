@@ -1,0 +1,29 @@
+@import "../../mixins.scss";
+
+.title{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title-inner{
+        max-width: 80%;
+        padding: 1rem;
+        text-align: center;
+        border: 2px solid $primary-color;
+        border-radius: 2rem;
+        @include mQmax(900px){
+            h1{
+                font-size: 1.6rem;
+            }
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+    
+}

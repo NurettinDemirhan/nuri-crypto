@@ -65,12 +65,7 @@ const CoinListItem: React.FC<props> = (props) => {
             <label>24 Hour High: </label>
             <p>{props.high_24h}</p>
           </div>
-          { props.asd 
-          ? 
-          <button onClick={props.onClickDelete} className='more-details-button'>
-            Delete
-          </button>
-          : null}
+          
           <div className='one-detail'>
             <label>Total Volume: </label>
             <p>{props.total_volume}</p>
@@ -95,7 +90,12 @@ const CoinListItem: React.FC<props> = (props) => {
             <label>Marketcap Change Percentage 24h: </label>
             <p style={calculatePriceChangeStyle(props.market_cap_change_percentage_24h)}>{props.market_cap_change_percentage_24h?.toFixed(1)}%</p>
           </div>
-
+          { props.asd 
+          ? 
+          <button onClick={props.onClickDelete} className='more-details-button'>
+            Delete
+          </button>
+          : null}
         
       </section>
     </div>

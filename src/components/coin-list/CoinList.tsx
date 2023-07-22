@@ -72,7 +72,7 @@ const CoinList = () => {
   return (
     <div className="coin-list">
       <h1>TOP 10 CURRENCIES</h1>
-        <ListHeader/>
+        {/* <ListHeader/> */}
         {coinList}
     </div>
   );
